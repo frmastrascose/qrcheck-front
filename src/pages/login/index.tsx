@@ -74,7 +74,6 @@ export default function Index() {
               <Link className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500" to="/login/new-register">Create account</Link>
             </p>
           </div>
-          <Link className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500" to="/auto-attendant/index">Auto Atendimento</Link>
           
         </div>
       </div>
