@@ -1,4 +1,7 @@
 export interface ICheckinReponse {
+    id: string;
+    companyId: string;
+    equipamentId: string;
     customerName: string;
     customerDocument: string;
     roomNumber: string;
@@ -6,4 +9,5 @@ export interface ICheckinReponse {
     wifiName: string;
     wifiLogin: string;
     wifiPassword: string;
+    status: string;
 }
