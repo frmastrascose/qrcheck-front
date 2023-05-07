@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Logo from '../../component/logo';
-import { IAlertMessage } from "../../model/component/IAlertMessage";
 import { ICheckinRequest } from '../../model/auto-attendant/ICheckinRequest';
+import { Link } from 'react-router-dom';
 
 export default function Confirmation() {
     const [showExperienceForm, setShowExperienceForm] = useState<boolean>(false);
@@ -21,7 +21,9 @@ export default function Confirmation() {
         setCheckinRequest(checkinRequest);
     };
 
-    const registerForm = async (e: any) => { }
+    const registerForm = async (e: any) => { 
+        //TODO: fazer a implementação de salvar o formulário
+    }
 
     return (
         <form>
@@ -123,12 +125,9 @@ export default function Confirmation() {
                                 </div>
 
                                 <div className="mt-6 flex items-center justify-end gap-x-6">
-                                    <button
-                                        type="submit"
-                                        className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                                    >
-                                        Confirmar
-                                    </button>
+                                    <div className="mt-2">
+                                        <Link className="btn-auto flex h-full w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" to="/customer/checkinQrCode?id=c9f9fa93-4beb-46ba-8291-df903541b505customer/checkinQrCode?id=c9f9fa93-4beb-46ba-8291-df903541b505">Confirmar</Link>
+                                    </div>
                                 </div>
                             </form>
                         </> : null}

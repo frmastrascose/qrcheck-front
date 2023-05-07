@@ -11,7 +11,7 @@ export default function CheckinResume(props: Props) {
     <>
       <div>
         <div className={Style.div_container}>
-          <h1 className={Style.title}>Bem vindo(a),</h1>
+          <h1 className={Style.title}>Olá,</h1>
           <p>
             <h2 className={Style.subTitle}>{props.checkinResponse.customerName}</h2>
           </p>
@@ -41,7 +41,7 @@ export default function CheckinResume(props: Props) {
               </dd>
             </div>
             <button onClick={() => props.changeSetShowResume()} className={Style.btn}>
-              Iniciar Checkin
+              Confirmar e retire sua chave
             </button>
           </dl>
         </div>
