@@ -29,4 +29,9 @@ h2 {
   padding: 1rem;
   height: 4rem !important;
   font-size: 3rem !important;
+  background-color: #e56902;
+}
+
+.btn-auto:hover {
+    background-color: #ae4f00 !important;
 }

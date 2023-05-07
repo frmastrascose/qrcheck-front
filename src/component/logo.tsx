@@ -2,10 +2,11 @@ export default function Logo() {
     return (
         <>
             <img
-                className="mx-auto h-10 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                className="mx-auto h-10 w-auto mt-2"
+                src={require('../../src/logo.svg').default}
                 alt="Check Travel"
             />
+
         </>
     )
 }
