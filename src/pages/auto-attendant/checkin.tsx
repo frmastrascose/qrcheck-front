@@ -45,7 +45,8 @@ export default function Checkin() {
 
   const handleRead = (code: QRCode) => {
     if (code?.data) {
-      VerifyCheckin(code.data);
+      //VerifyCheckin(code.data);
+      handleSetShowCheckinResume(true);
     }
   };
 
@@ -89,7 +90,9 @@ export default function Checkin() {
                 <h2 className={Style.title}>
                   Aproxime o QrCode
                 </h2>
-                <QrCodeReader delay={100} width={500} height={500} onRead={handleRead} />
+                <div className={Style.div_qrcode}>
+                  <QrCodeReader delay={100} width={500} height={500} onRead={handleRead} />
+                </div>
               </>
               :
               <CheckinResume checkinResponse={checkinReponse} changeSetShowResume={() => handleSetShowCheckinResume(false)} />}
