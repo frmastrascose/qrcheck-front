@@ -1,12 +1,14 @@
-import { Navigate, Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import AutoAttendIndex from "./pages/index"
 import AutoAttendCheckin from "./pages/auto-attendant/checkin"
+import CheckinQrCode from "./pages/customer/checkinQrCode"
 
 export function Router(props: any) {
     return (
         <Routes>
           <Route path="/" element={<AutoAttendIndex />} />
           <Route path="/auto-attendant/checkin" element={<AutoAttendCheckin />} />
+          <Route path="/customer/checkinQrCode" element={<CheckinQrCode />} />
         </Routes>
       );
 }
