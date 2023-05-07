@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Logo from '../../component/logo';
 import { ICheckinRequest } from '../../model/auto-attendant/ICheckinRequest';
 import { Link } from 'react-router-dom';
+import { Style } from "../../styles/customer/confimationStyle";
 
 export default function Confirmation() {
     const [showExperienceForm, setShowExperienceForm] = useState<boolean>(false);
@@ -28,15 +29,15 @@ export default function Confirmation() {
     return (
         <form>
             <Logo />
-            <div className="space-y-12">
-                <div className="border-gray-900/10 pb-12">
-                    <h2 className="text-base font-semibold leading-7 text-gray-900">Confirmação de Checkin:</h2>
-                    <div className="border-gray-900/10 pb-12">
-                        <div className="mt-10 space-y-10">
+            <div className={Style.container}>
+                <div className={Style.cardPrincipal}>
+                    <h2 className={Style.title}>Confirmação de Checkin:</h2>
+                    <div className={Style.div_1}>
+                        <div className={Style.div_1}>
                             <fieldset>
-                                <div className="mt-6 space-y-6">
-                                    <div className="relative flex gap-x-3">
-                                        <div className="flex h-6 items-center">
+                                <div className={Style.div_3}>
+                                    <div className={Style.div_4}>
+                                        <div className={Style.div_check}>
                                             <input
                                                 id="confirmation"
                                                 name="confirmation"
@@ -45,7 +46,7 @@ export default function Confirmation() {
                                                 onClick={() => handleSetShowExperienceForm()}
                                             />
                                         </div>
-                                        <div className="text-sm leading-6">
+                                        <div className={Style.div_5}>
                                             <label htmlFor="confirmation" className="font-medium text-gray-900">
                                                 Confirmação
                                             </label>
@@ -59,8 +60,8 @@ export default function Confirmation() {
 
                     {showExperienceForm ?
                         <>
-                            <h2 className="text-base font-semibold leading-7 text-gray-900">Personalize sua experiência:</h2>
-                            <p className="mt-1 text-sm leading-6 text-gray-600">Nos ajude a tornar sua jornada mais incrível</p>
+                            <h2 className={Style.title_experience}>Personalize sua experiência:</h2>
+                            <p className={Style.sub_title}>Nos ajude a tornar sua jornada mais incrível</p>
 
                             <form onSubmit={registerForm}>
                                 <div className="col-span-full">
@@ -126,7 +127,7 @@ export default function Confirmation() {
 
                                 <div className="mt-6 flex items-center justify-end gap-x-6">
                                     <div className="mt-2">
-                                        <Link className="btn-auto flex h-full w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" to="/customer/checkinQrCode?id=c9f9fa93-4beb-46ba-8291-df903541b505customer/checkinQrCode?id=c9f9fa93-4beb-46ba-8291-df903541b505">Confirmar</Link>
+                                        <Link className={Style.btn_confirmation} to="/customer/checkinQrCode?id=c9f9fa93-4beb-46ba-8291-df903541b505customer/checkinQrCode?id=c9f9fa93-4beb-46ba-8291-df903541b505">Confirmar</Link>
                                     </div>
                                 </div>
                             </form>
